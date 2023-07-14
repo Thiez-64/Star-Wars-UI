@@ -1,0 +1,251 @@
+@use "/src/colors" as colors;
+@font-face {
+  font-family: "GT Ultra";
+  src: url("fonts/GT-Ultra-Standard-Bold-Trial.woff2") format("woff2");
+  font-style: bold;
+}
+
+body {
+  margin: 0;
+  background-color: colors.$dark-navi;
+}
+
+.wrapper {
+  height: calc(100vh - 160px);
+  width: 1067px;
+  padding-block: 80px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: colors.$yellow;
+    justify-content: space-between;
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-around;
+      height: 100%;
+
+      .description {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .boxLogo {
+          width: 80px;
+          overflow: hidden;
+          .logos {
+            display: flex;
+            flex-direction: row;
+            width: fit-content;
+
+            transition: transform 0.3s ease-in-out;
+            .logo {
+              width: 80px;
+              height: 80px;
+              margin-bottom: 24px;
+            }
+          }
+        }
+        .boxTitle {
+          width: 509px;
+          overflow: hidden;
+
+          .titles {
+            display: flex;
+            flex-direction: row;
+            width: fit-content;
+
+            transition: transform 0.3s ease-in-out;
+            .title {
+              font-family: "Montserrat", sans-serif;
+              font-weight: 700;
+              font-size: 40px;
+              line-height: 48.76px;
+              margin-bottom: 8px;
+              width: 509px;
+            }
+          }
+        }
+        .boxText {
+          width: 420px;
+          overflow: hidden;
+
+          .texts {
+            display: flex;
+            flex-direction: row;
+            width: fit-content;
+
+            transition: transform 0.3s ease-in-out;
+            .text {
+              font-family: "Montserrat", sans-serif;
+              font-weight: 300;
+              font-size: 20px;
+              line-height: 30px;
+              width: 32ch;
+            }
+          }
+        }
+      }
+      .boxDate {
+        width: 532px;
+        overflow: hidden;
+        .dates {
+          display: flex;
+          flex-direction: row;
+          width: fit-content;
+
+          transition: transform 0.3s ease-in-out;
+
+          img {
+            width: 532px;
+          }
+
+          .date {
+            color: colors.$yellow;
+            line-height: 183px;
+            font-size: 210px;
+            font-weight: 900;
+            width: 532px;
+            font-family: "Montserrat", sans-serif;
+          }
+        }
+      }
+    }
+    .right {
+      width: 430px;
+      height: 610px;
+      overflow: hidden;
+
+      .items {
+        display: flex;
+        flex-direction: row;
+        width: fit-content;
+
+        transition: transform 0.3s ease-in-out;
+
+        .item {
+          width: 430px;
+          height: 610px;
+          overflow: hidden;
+          position: relative;
+
+          .image1 {
+            width: 530px;
+            height: 822.59px;
+            position: absolute;
+            top: -30px;
+            left: -50px;
+          }
+
+          .image2 {
+            width: 702px;
+            height: 1094px;
+            position: absolute;
+            top: -75px;
+            left: -120px;
+          }
+
+          .image3 {
+            width: 637px;
+            height: 920px;
+            position: absolute;
+            top: -46px;
+            left: -80px;
+          }
+          .image4 {
+            width: 637px;
+            height: 920px;
+            position: absolute;
+            top: -50px;
+            left: -105px;
+          }
+          .image5 {
+            width: 637px;
+            height: 920px;
+            position: absolute;
+            top: -45px;
+            left: -100px;
+          }
+          .image6 {
+            width: 637px;
+            height: 920px;
+            position: absolute;
+            top: -66px;
+            left: -118px;
+          }
+        }
+      }
+    }
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 95px;
+
+    .arrows {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 40px;
+      .arrow {
+        color: colors.$yellow;
+        appearance: none;
+        background-color: unset;
+        border: unset;
+        padding: 0;
+        cursor: pointer;
+      }
+    }
+
+    .time {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .dot {
+        width: 32px;
+        height: 32px;
+        border-radius: 100%;
+        background-color: colors.$yellow-36;
+        border: 2px solid colors.$yellow-36;
+
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .line {
+        background-color: colors.$yellow-36;
+        height: 2px;
+        width: 125px;
+        position: relative;
+
+        .line_progress {
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          top: 0;
+          background-color: colors.$yellow;
+          transform: scaleX(0);
+          transform-origin: left;
+          transition: 300ms ease-in-out transform;
+        }
+        .line_progress_selected {
+          transform: scaleX(100%);
+        }
+      }
+
+      #dot1 {
+        background-color: colors.$yellow;
+      }
+    }
+  }
+}
